@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:blue;font-size:50px;">
+<script language="JavaScript">
+
+
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+
+
+function odejmowanie_zag(a, b) 
+{
+return a - b;
+}
+function mnozenie_zag(a, b) 
+{
+return a * b;
+}
+function do_kwadratu_zag1(a) 
+{
+return a * a;
+}
+function do_kwadratu_zag2(b) 
+{
+return b * b;
+}
+
+document.write("Odejmwoanie = " + a + " - " + b + " = " + odejmowanie_zag(a,b)+"<br>");
+document.write("Mnozenie = " + a + " * " + b + " = " + mnozenie_zag(a,b)+"<br>");
+document.write("Do kwadratu = " + a + " * " + a + " = " + do_kwadratu_zag1(a)+"<br>");
+document.write("Do kwadratu = "+ b + " * " + b + " = " + do_kwadratu_zag2(b)+"<br>");
+</script>
+</div>
+</body>
+</html>
