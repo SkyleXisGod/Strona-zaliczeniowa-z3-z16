@@ -1,0 +1,82 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="zadanie12" cols="80" rows="20" readonly>
+   <html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function AB_zag()
+{
+var a_x_zag = parseFloat(document.getElementById('ax').value);
+var a_y_zag = parseFloat(document.getElementById('ay').value);
+var b_x_zag = parseFloat(document.getElementById('bx').value);
+var b_y_zag = parseFloat(document.getElementById('by').value);
+var potega1 = Math.pow((a_x_zag - b_x_zag),2);
+var potega2 = Math.pow((a_y_zag - b_y_zag),2);
+var h = Math.sqrt(potega1+potega2);
+document.getElementById("Bok").innerHTML ="Dlugosc boku AB= "+h.toFixed(2)+" cm.";
+}
+
+function BC_zag()
+{
+var b_x_zag = parseFloat(document.getElementById('bx').value);
+var b_y_zag = parseFloat(document.getElementById('by').value);
+var c_x_zag = parseFloat(document.getElementById('cx').value);
+var c_y_zag = parseFloat(document.getElementById('cy').value);
+var potega1 = Math.pow((b_x_zag - c_x_zag),2);
+var potega2 = Math.pow((b_y_zag - c_y_zag),2);
+var h = Math.sqrt(potega1+potega2);
+document.getElementById("Bok").innerHTML ="Dlugosc boku BC= "+h.toFixed(2)+" cm.";
+}
+function AC_zag()
+{
+var a_x_zag = parseFloat(document.getElementById('ax').value);
+var a_y_zag = parseFloat(document.getElementById('ay').value);
+var c_x_zag = parseFloat(document.getElementById('cx').value);
+var c_y_zag = parseFloat(document.getElementById('cy').value);
+var potega1 = Math.pow((a_x_zag - c_x_zag),2);
+var potega2 = Math.pow((a_y_zag - c_y_zag),2);
+var h = Math.sqrt(potega1+potega2);
+document.getElementById("Bok").innerHTML ="Dlugosc boku AC= "+h.toFixed(2)+" cm.";
+}
+</script>
+<center>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj a x: <input type="text" id="ax" value="podaj ax"> cm<br>
+Podaj a y: <input type="text" id="ay" value="podaj ay"> cm<br>
+
+Podaj b x: <input type="text" id="bx" value="podaj bx"> cm<br>
+Podaj b y: <input type="text" id="by" value="podaj by"> cm<br>
+
+Podaj c x: <input type="text" id="cx" value="podaj cx"> cm<br>
+Podaj c y: <input type="text" id="cy" value="podaj cy"> cm<br><br>
+
+<input type="button" name="pole" value="Bok AB" Onclick="AB_zag()">
+<input type="button" name="pole" value="Bok BC" Onclick="BC_zag()">
+<input type="button" name="pole" value="Bok AC" Onclick="AC_zag()"><br><br>
+
+<div style="color:red;font-size:50px;"id="Bok"></div>
+</center>
+
+</body>
+</html>
+ 
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
