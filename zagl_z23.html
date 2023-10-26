@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<title>Zagloba</title>
+<script language="JavaScript">
+
+// Kacper Zagłoba 2P 26.10.2023 
+// ============= DRABINA ============= ->
+
+function Drabina(d,x)
+{
+ var d_zag=parseFloat(d)
+ var x_zag=parseFloat(x)
+ var Drabina=Math.sqrt(d_zag*d_zag+x_zag*x_zag);
+document.getElementsByName('drabina_zag')[0].value= Drabina.toFixed(2);
+}
+// ============= ALFA ============= ->
+
+function Alfa(d,x)
+{
+ var d_zag=parseFloat(d)
+ var x_zag=parseFloat(x)
+ var Alfa=(Math.atan(d_zag/x_zag)*180/Math.PI);
+document.getElementsByName('alfa_zag')[0].value= Alfa.toFixed(2);
+
+// ============= KONIEC ============= ->
+}
+</script>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Pobliczanie odległości od drabiny i kąta</p>
+<form name="formularz" onsubmit="Drabina(this.d.value, this.x.value); Alfa(this.d.value, this.x.value); return false">
+
+<!- ============= D oraz X ============= ->
+
+Podaj d=
+<input size="6" name="d">
+Podaj x=
+<input size="6" name="x">
+
+<!- ============= PRZYCISK OBLICZ ============= ->
+
+<br> <br>
+<input type="submit" Value="oblicz" >
+<br> <br>
+
+<!- ============= WYNIKI ============= ->
+
+Drabina=
+<input size="6" name="drabina_zag">
+Alfa=
+<input size="6" name="alfa_zag">
+
+<!- ============= TABELA WYNIKOWA ============= ->
+
+<table>
+<tr id="dlugosc_zag"></tr>
+<tr id="kat_zag"></tr>
+</table>
+</form>
+</body>
+</html>
+
+<!- Kacper Zagłoba 2P 26.10.2023 ->
