@@ -1,0 +1,49 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="zadanie12" cols="80" rows="20" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_zag()
+{
+var a_zag= parseFloat(document.getElementById('a').value);
+var b_zag= parseFloat(document.getElementById('b').value);
+var wynik= a_zag*b_zag;
+document.getElementById("wynik").innerHTML ="Pole kwadratu= "+wynik.toFixed(2)+" cm^2";
+}
+function obwod_zag()
+{
+var a_zag = parseFloat(document.getElementById('a').value);
+var b_zag = parseFloat(document.getElementById('b').value);
+var wynik= 2*a_zag+2*b_zag;
+document.getElementById("wynik").innerHTML ="Obwód kwadratu= "+wynik.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku A: <input type="text" id="a" value="podaj długość"> cm<br><br><br>
+Podaj długość boku B: <input type="text" id="b" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole_zag()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_zag()"><br><br>
+<div style="color:red;font-size:50px;"id="wynik"></div>
+</body>
+</html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
