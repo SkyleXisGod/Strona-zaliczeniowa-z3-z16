@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<title>
+Zagłoba
+</title>
+<script language="JavaScript">
+
+// WCZYTYWANIE X ORAZ S UŻYTKOWNIKA + OBLICZENIA ALFY =====>
+
+function Alfa(x_zag,s_zag)
+{
+x_zag=parseFloat(x_zag)
+s_zag=parseFloat(s_zag)
+
+// WYNIK ALFY =====>
+Alfa_zag = x_zag/s_zag;
+document.getElementsByName('alfa_zag')[0].value=Alfa_zag.toFixed(2);  
+}
+
+// WCZYTYWANIE X ORAZ S UŻYTKOWNIKA + OBLICZENIA OBWODU =====>
+
+function O(x_zag,s_zag)
+{
+x_zag=parseFloat(x_zag)
+s_zag=parseFloat(s_zag)
+h = Math.pow(s_zag,2)-Math.pow(x_zag,2);
+
+// WYNIK OBWODU =====>
+
+wysokosc_wynik_zag = Math.sqrt(h);
+document.getElementsByName('wys_zag')[0].value=wysokosc_wynik_zag.toFixed(2);;
+}
+</script>
+</head>
+<body>
+<center>
+<br> <br>
+<form name="formularz" action="..." onsubmit="Alfa(this.odleglosc.value,this.droga.value); O(this.odleglosc.value,this.droga.value);return false">
+Podaj odleglosc =
+<input size="6" name="odleglosc">
+Podaj droge =
+<input size="6" name="droga">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Wysokosc =
+<input size="6" name="wys_zag">
+Alfa =
+<input size="6" name="alfa_zag">
+</form>
+</center>
+</body>
+</html>
