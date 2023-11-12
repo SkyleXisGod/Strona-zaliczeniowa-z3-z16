@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<title>
+ Zagłoba
+</title>
+<body>
+<div style="color: black;">
+<script>
+
+// WCZYTANIE POTRZEBNYCH DANYCH =====>
+
+  var n_zag = parseFloat(prompt("N0= ","sztuki"));
+  var t_zag = parseFloat(prompt("T= ","lata"));
+  var t1t2_zag = parseFloat(prompt("T1/2=","lata"));
+
+// OBLICZENIA T1T2 =====>
+
+  function Lambda(t1t2_zag)
+ {
+  return (Math.log(2))/t1t2_zag;
+ }
+
+// OBLICZENIA T i N  =====>
+
+ function euler(t_zag,n_zag)
+ {
+	potega = t*-Lambda(t1t2_zag);
+	e = Math.pow(Math.E,potega);
+  return n * e;
+ }
+
+// WYNIKI  =====>
+
+document.write("N0 = "+ n_zag +"[sztuk]<br>")
+document.write("t = "+ t_zag +"[lat]<br>")
+document.write("T1/T2 = "+ t1t2_zag +"[lat]<br>");
+document.write("Lambda = "+ Lambda(t1t2_zag).toFixed(7)+"[1/rok]<br>");
+document.write("N = "+euler(t_zag,n_zag).toFixed(7)+"[sztuk]");
+</script>
+
+</div>
+
+</body>
+</html>
+
+<!- Kacper Zagłoba 2P 12.11.2023 ->
