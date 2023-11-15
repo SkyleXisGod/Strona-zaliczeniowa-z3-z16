@@ -1,0 +1,82 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="zadanie12" cols="80" rows="20" readonly>
+<html>
+<head>
+<title>
+Zagłoba
+</title>
+<script language="JavaScript">
+
+// WCZYTYWANIE b, a, b I OBLICZENIE POLA UŻYTKOWNIKA =====>
+
+function P(b_zag,a_zag,h_zag)
+{
+a_zag=parseFloat(a_zag)
+b_zag=parseFloat(b_zag)
+h_zag=parseFloat(h_zag)
+
+// WYNIK POLA UŻYTKOWNIKA =====>
+
+Pole_wynik_zag = (Math.abs((a_zag+b_zag))*h_zag)/2
+document.getElementsByName('Pole')[0].value=Pole_wynik_zag.toFixed(2); /* na dokument */
+}
+
+// WCZYTYWANIE b, a, b I OBLICZENIE OBWODU UŻYTKOWNIKA =====>
+
+
+function O(b_zag,a_zag,h_zag)
+{
+a_zag=parseFloat(a_zag)
+b_zag=parseFloat(b_zag)
+h_zag=parseFloat(h_zag)
+x_zag = (Math.abs(a_zag - b_zag))/2;
+bok1_zag = Math.pow(x_zag,2)+Math.pow(h_zag,2);
+bok1_1 = Math.sqrt(bok1_zag);
+
+// WYNIK OBWODU UŻYTKOWNIKA =====>
+
+obwod_wynik_zag = a_zag+b_zag+ 2*bok1_1;
+document.getElementsByName('Obwod')[0].value=obwod_wynik_zag.toFixed(2);;
+}
+
+</script>
+</head>
+<body>
+<center> 
+<br> <br>
+<form name="formularz" action="..." onsubmit="P(this.a.value,this.b.value,this.h.value); O(this.a.value,this.b.value,this.h.value);return false">
+Podaj a=
+<input size="6" name="a">
+Podaj b=
+<input size="6" name="b">
+Podaj h=
+<input size="6" name="h">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Obwod =
+<input size="6" name="Obwod">
+Pole =
+<input size="6" name="Pole">
+</form>
+</center>
+</body>
+</html>
+
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
